@@ -5,7 +5,7 @@
 
 /**********Google Sheets Definations***********/
 char column_name_in_sheets[ ] [10]= {"value1","value2","value3"};                        /*1. The Total no of column depends on how many value you have created in Script of Sheets;2. It has to be in order as per the rows decided in google sheets*/
-String Sheets_GAS_ID = "AKfycbwKsjXy6wHFgOHF5Xlh1lSIE3bsig6YElwq0Z2I32lWKNe924_vjeIEjJb5409aSdM4oQ";                                         /*This is the Sheets GAS ID, you need to look for your sheets id*/
+String Sheets_GAS_ID = "AKfycby9Kw1YAqwSdC85tK-oj8K7fiTLKMqkdNP0EDuz29i_Pynj2KaU6oU-wvqdh19KRXzjRA";                                         /*This is the Sheets GAS ID, you need to look for your sheets id*/
 int No_of_Parameters = 3;                                                                /*Here No_of_Parameters decides how many parameters you want to send it to Google Sheets at once, change it according to your needs*/
 /*********************************************/
 
@@ -14,7 +14,7 @@ SoftwareSerial SerialGPS(4, 5);/* (Rx, Tx) */
 /* Create an object named gps of the class TinyGPSPlus */
 TinyGPSPlus gps;              
 
-const char* ssid = "Travis";
+const char* ssid = "Pawsala";
 const char* password = "Travis1915";
 
 void setup() {
