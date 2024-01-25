@@ -38,60 +38,9 @@ void setup()
 
 void loop()
 {
-  while (SerialGPS.available() > 0)
-  {
-    if (gps.encode(SerialGPS.read()))
-    {
-      if (gps.location.isValid())
-      {
-        Latitude = gps.location.lat();
-        Longitude = gps.location.lng();
-
-        Serial.print("Latitude: ");
-        Serial.println(Latitude, 6);
-        Serial.print("Longitude: ");
-        Serial.println(Longitude, 6);
-      }
-
-      if (gps.date.isValid())
-      {
-        date = gps.date.day();
-        month = gps.date.month();
-        year = gps.date.year();
-
-        Serial.print("Date: ");
-        Serial.print(date);
-        Serial.print("/");
-        Serial.print(month);
-        Serial.print("/");
-        Serial.println(year);
-      }
-
-      if (gps.time.isValid())
-      {
-        hour = gps.time.hour() + 5; // Adjust UTC
-        minute = gps.time.minute();
-        second = gps.time.second();
-
-        Serial.print("Time: ");
-        Serial.print(hour);
-        Serial.print(":");
-        Serial.print(minute);
-        Serial.print(":");
-        Serial.println(second);
-
-        // Assign values for web response
-        LatitudeString = String(Latitude, 6);
-        LongitudeString = String(Longitude, 6);
-        DateString = String(date) + "/" + String(month) + "/" + String(year);
-        TimeString = String(hour) + ":" + String(minute) + ":" + String(second);
-      }
-    }
-  }
+  
    float a = 1, b = 2, c = 3;
-//   // float a = Latitude, b = Longitude, c = 2;                           /*Demo values that has to be sent to google sheets, you can use sensor values*/
-// Serial.println(Latitude);
-// Serial.println(Longitude);
+
    Data_to_Sheets(No_of_Parameters, a, b, c);         /*1. This function accepts multiple float parameter, here No_of_Parameters decides how many parameters you want to send to Google Sheets; 2. The values sent should be in order as per the column in Google Sheets*/
 
   Serial.println();
