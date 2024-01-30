@@ -4,8 +4,8 @@ Introduction: With the increasing emphasis on road safety and regulatory complia
 
 Model 1: Universal Compatibility and Regulatory Compliance The first model is engineered to ensure universal compatibility with a wide range of vehicles, emphasizing seamless integration and regulatory compliance. Upon the initiation of the vehicle, the telemetry device, powered by an Arduino module, commences data collection from a suite of sensors, including piezoceramic (accelerometer), angular rate (gyro), Wi-Fi, GSM, NavIC GAGAN GPS receiver, RFID, and IR modules. Subsequently, the collected data is transmitted at regular intervals via the GSM module to the Regional Transport Office (RTO) services. Upon the cessation of vehicle operation, the system enters a dormant state, ensuring efficient power management.
 
+![image](https://github.com/travis2319/Blackbox/assets/95576296/00ebaab0-bf58-469b-a253-426313ee7f55)
 
-![image](https://github.com/travis2319/Blackbox/assets/95576296/878af2b7-31d8-4882-ba02-6c5e49b1bf59)
 
 Model 2: User-Centric Accessibility and Operational Efficiency In contrast, the second model prioritizes user accessibility, operational efficiency, and cost-effectiveness. Upon vehicle activation, the telemetry module synchronizes with the vehicle's systems and prompts the user to engage with a dedicated mobile application. The user is required to authenticate using biometric credentials and grant necessary permissions for location tracking, hotspot activation, and nearby device sharing. As the vehicle operates, the Arduino module interfaces with the vehicle's ECU sensors via the OBDII port, collecting real-time data and location information through the Wi-Fi module. Subsequently, the collected data is transmitted directly to the user's mobile application, with automatic backup and encryption for secure transmission to the RTO office and company servers at predefined intervals.
 
