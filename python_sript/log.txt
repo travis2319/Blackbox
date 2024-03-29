@@ -1,0 +1,211 @@
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ cat test_conn.py 
+import obd
+
+connection = obd.OBD() # auto connect
+
+# OR
+
+connection = obd.OBD("/dev/ttyUSB0") # create connection with USB 0
+
+# OR
+
+ports = obd.scan_serial()      # return list of valid USB or RF ports
+print ports                    # ['/dev/ttyUSB0', '/dev/ttyUSB1']
+connection = obd.OBD(ports[0]) # connect to the first port in the list                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ subl test_conn.py        
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ subl test_conn.py
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ cat test_conn.py 
+import obd
+
+# connection = obd.OBD() # auto connect
+
+# # OR
+
+connection = obd.OBD("/dev/ttyACM0") # create connection with USB 0
+
+# OR
+print(connection)
+# ports = obd.scan_serial()      # return list of valid USB or RF ports
+# print ports                    # ['/dev/ttyUSB0', '/dev/ttyUSB1']
+# connection = obd.OBD(ports[0]) # connect to the first port in the list                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py 
+<obd.obd.OBD object at 0x7f69538e4cd0>
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ subl test_conn.py  
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ ls
+bash_file.sh  debug2.py  debug3.py  debug.py  IMP_links.txt  test_conn.py  test.py
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ subl test.py     
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f64f9da8dd0>
+0.0 kilometer_per_hour
+0.0 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f70049ecb50>
+0.0 kilometer_per_hour
+0.0 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f691384d410>
+4.0 kilometer_per_hour
+2.485484768949336 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7fa327e03510>
+0.0 kilometer_per_hour
+0.0 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7fcdea05d250>
+0.0 kilometer_per_hour
+0.0 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7fbec90acdd0>
+2.0 kilometer_per_hour
+1.242742384474668 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f284bb11990>
+2.0 kilometer_per_hour
+1.242742384474668 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f1c9805d250>
+7.0 kilometer_per_hour
+4.349598345661338 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f24fbaddb90>
+13.0 kilometer_per_hour
+8.07782549908534 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f0a2a885c50>
+9.0 kilometer_per_hour
+5.592340730136005 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f579566d250>
+6.0 kilometer_per_hour
+3.7282271534240037 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f03341eb450>
+11.0 kilometer_per_hour
+6.835083114610674 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+^[[A<obd.obd.OBD object at 0x7f6796f58dd0>
+7.0 kilometer_per_hour
+4.349598345661338 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f5326ce7d50>
+7.0 kilometer_per_hour
+4.349598345661338 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7ffbaa87b450>
+50.0 kilometer_per_hour
+31.068559611866696 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f8860e9cd50>
+37.0 kilometer_per_hour
+22.990734112781357 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f3ed032de10>
+19.0 kilometer_per_hour
+11.806052652509345 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f409d5cc9d0>
+43.0 kilometer_per_hour
+26.71896126620536 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f17f10e1990>
+41.0 kilometer_per_hour
+25.47621888173069 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7ffaeec3b450>
+31.0 kilometer_per_hour
+19.262506959357353 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f990a5b16d0>
+40.0 kilometer_per_hour
+24.854847689493358 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f2f453ede10>
+34.0 kilometer_per_hour
+21.126620536069353 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f275f745e10>
+42.0 kilometer_per_hour
+26.097590073968025 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f7221968f10>
+54.0 kilometer_per_hour
+33.55404438081603 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f8a09d33450>
+34.0 kilometer_per_hour
+21.126620536069353 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f0c1690de10>
+52.0 kilometer_per_hour
+32.31130199634136 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7ff6eebf3510>
+52.0 kilometer_per_hour
+32.31130199634136 mile_per_hour
