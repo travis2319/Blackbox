@@ -1,0 +1,12 @@
+https://forum.pjrc.com/index.php?threads/method-to-capture-serial-data-from-dev-ttyacm0-or-dev-rfcomm0-in-linux.32982/
+
+#!/bin/sh
+
+echo "Usage: <program> <OUTPUT>"
+
+INPUT="/dev/ttyACM0"
+OUTPUT="$1"
+
+while true; do
+    cat "$INPUT" >> "$OUTPUT"
+done
