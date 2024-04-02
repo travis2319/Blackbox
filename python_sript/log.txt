@@ -209,3 +209,268 @@ bash_file.sh  debug2.py  debug3.py  debug.py  IMP_links.txt  test_conn.py  test.
 <obd.obd.OBD object at 0x7ff6eebf3510>
 52.0 kilometer_per_hour
 32.31130199634136 mile_per_hour
+
+
+02/04/2024
+
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ ls
+bash_file.sh  debug2.py  debug3.py  debug.py  IMP_links.txt  log.txt  test_conn.py  test.py
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ subl test.py    
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ subl test_conn.py 
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+[obd.elm327] Device disconnected while reading
+[obd.elm327] Failed to retrieve current protocol
+[obd.elm327] Connected to the adapter, but failed to connect to the vehicle
+[obd.obd] Cannot load commands: No connection to car
+<obd.obd.OBD object at 0x7f2fe7853590>
+[obd.obd] Query failed, no connection available
+None
+Traceback (most recent call last):
+  File "/media/kali/HDD/DOCUMENTS/DEV/Blackbox/python_sript/test_conn.py", line 13, in <module>
+    print(response.value.to("mph"))
+          ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'to'
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f8cc7aadc90>
+0.0 kilometer_per_hour
+0.0 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7ff54fc44d90>
+Traceback (most recent call last):
+  File "/media/kali/HDD/DOCUMENTS/DEV/Blackbox/python_sript/test_conn.py", line 7, in <module>
+    cmd = obd.commands.COOLANT_LOAD
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Commands' object has no attribute 'COOLANT_LOAD'. Did you mean: 'COOLANT_TEMP'?
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f4c3c95cb50>
+931.0 revolutions_per_minute
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f7cfa95ac10>
+2148.5 revolutions_per_minute
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7fe5dfa1fd50>
+931.0 revolutions_per_minute
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7fd40029d310>
+102 degree_Celsius
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f03a6ec6c10>
+104 degree_Celsius
+('Closed loop, using oxygen sensor feedback to determine fuel mix', '')
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f739a3b5e10>
+98 degree_Celsius
+<obd.OBDResponse.Status object at 0x7f73a00051d0>
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ subl test_conn.py  
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f60aacfd310>
+100 degree_Celsius
+924.5 revolutions_per_minute
+Traceback (most recent call last):
+  File "/media/kali/HDD/DOCUMENTS/DEV/Blackbox/python_sript/test_conn.py", line 25, in <module>
+    print(response.value.to("mph"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pint/facets/plain/quantity.py", line 522, in to
+    magnitude = self._convert_magnitude_not_inplace(other, *contexts, **ctx_kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pint/facets/plain/quantity.py", line 471, in _convert_magnitude_not_inplace
+    return self._REGISTRY.convert(self._magnitude, self._units, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pint/facets/plain/registry.py", line 911, in convert
+    return self._convert(value, src, dst, inplace)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pint/facets/context/registry.py", line 393, in _convert
+    return super()._convert(value, src, dst, inplace)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pint/facets/nonmultiplicative/registry.py", line 206, in _convert
+    return super()._convert(value, src, dst, inplace)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pint/facets/plain/registry.py", line 944, in _convert
+    raise DimensionalityError(src, dst, src_dim, dst_dim)
+pint.errors.DimensionalityError: Cannot convert from 'revolutions_per_minute' (1 / [time]) to 'mile_per_hour' ([length] / [time])
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f2d14059e90>
+100 degree_Celsius
+919.0 revolutions_per_minute
+Traceback (most recent call last):
+  File "/media/kali/HDD/DOCUMENTS/DEV/Blackbox/python_sript/test_conn.py", line 25, in <module>
+    print(response1.value.to("mph"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pint/facets/plain/quantity.py", line 522, in to
+    magnitude = self._convert_magnitude_not_inplace(other, *contexts, **ctx_kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pint/facets/plain/quantity.py", line 471, in _convert_magnitude_not_inplace
+    return self._REGISTRY.convert(self._magnitude, self._units, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pint/facets/plain/registry.py", line 911, in convert
+    return self._convert(value, src, dst, inplace)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pint/facets/context/registry.py", line 393, in _convert
+    return super()._convert(value, src, dst, inplace)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pint/facets/nonmultiplicative/registry.py", line 206, in _convert
+    return super()._convert(value, src, dst, inplace)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pint/facets/plain/registry.py", line 944, in _convert
+    raise DimensionalityError(src, dst, src_dim, dst_dim)
+pint.errors.DimensionalityError: Cannot convert from 'revolutions_per_minute' (1 / [time]) to 'mile_per_hour' ([length] / [time])
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f5339a69310>
+99 degree_Celsius
+0.0 kilometer_per_hour
+0.0 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7fce1ec97510>
+98 degree_Celsius
+14.0 kilometer_per_hour
+8.699196691322676 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f37a63d4d10>
+98 degree_Celsius
+12.0 kilometer_per_hour
+7.456454306848007 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7fc30c064d10>
+98 degree_Celsius
+12.0 kilometer_per_hour
+7.456454306848007 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f276a519310>
+95 degree_Celsius
+25.0 kilometer_per_hour
+15.534279805933348 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ 
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ 
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f2fad520c10>
+94 degree_Celsius
+5.0 kilometer_per_hour
+3.1068559611866697 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7fa2ecf95e10>
+96 degree_Celsius
+31.0 kilometer_per_hour
+19.262506959357353 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ subl test_conn.py  
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7fdfed3ede10>
+95 degree_Celsius
+78.0 kilometer_per_hour
+48.46695299451205 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f307f83de10>
+96 degree_Celsius
+37.0 kilometer_per_hour
+22.990734112781357 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7ff447e51a50>
+98 degree_Celsius
+22.0 kilometer_per_hour
+13.670166229221348 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f8ac3221310>
+98 degree_Celsius
+35.0 kilometer_per_hour
+21.747991728306687 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7fe8ae23c510>
+98 degree_Celsius
+29.0 kilometer_per_hour
+18.019764574882686 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f532d004b50>
+98 degree_Celsius
+55.0 kilometer_per_hour
+34.175415573053364 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f95e3959a10>
+93 degree_Celsius
+101.0 kilometer_per_hour
+62.758490415970726 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7f3ed0dbd310>
+95 degree_Celsius
+115.0 kilometer_per_hour
+71.45768710729341 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7fbf47394510>
+94 degree_Celsius
+25.0 kilometer_per_hour
+15.534279805933348 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ python test_conn.py
+<obd.obd.OBD object at 0x7efe16d24cd0>
+93 degree_Celsius
+26.0 kilometer_per_hour
+16.15565099817068 mile_per_hour
+                                                                                                                  
+┌──(kali㉿kali)-[/media/…/DOCUMENTS/DEV/Blackbox/python_sript]
+└─$ 
