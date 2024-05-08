@@ -1,36 +1,29 @@
 import obd
+import pandas as pd
 
-connection = obd.OBD("/dev/ttyACM0") # create connection with USB 0
+# connection = obd.OBD("/dev/ttyACM0") # create connection with USB 0
 
-print(connection)
+dis={"a":[],"b":[]}
 
-cmd = obd.commands.COOLANT_TEMP
+# print(connection)
 
-response = connection.query(cmd)
+# cmd = obd.commands.COOLANT_TEMP
 
-print(response.value)
+# response = connection.query(cmd)
 
-
-
-cmd = obd.commands.SPEED
-
-response = connection.query(cmd)
-
-print(response.value)
-
-print(response.value.to("mph"))
+# print(response.value)
+dis["a"].append("response value")
 
 
+# cmd = obd.commands.SPEED
 
+# response = connection.query(cmd)
 
-# ports = obd.scan_serial()      # return list of valid USB or RF ports
-# print ports                    # ['/dev/ttyUSB0', '/dev/ttyUSB1']
-# connection = obd.OBD(ports[0]) # connect to the first port in the list
+# print(response.value)
 
+# print(response.value.to("mph"))
+dis["b"].append("response value")
 
+d=pd.DataFrame(dis)
+d.to_csv("Test9.csv")
 
-# connection = obd.OBD() # auto connect
-
-# # OR
-
-# OR
