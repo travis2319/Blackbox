@@ -1,0 +1,11 @@
+,Time,Coolant Temp,SPEED,Engine Load,Run time,Throttle_pos_b
+0,Sun May 12 16:48:25 2024,88 degree_Celsius,48.0 kilometer_per_hour,20.784313725490197 percent,6375.0 second,20.0 percent
+1,Sun May 12 16:48:39 2024,88 degree_Celsius,53.0 kilometer_per_hour,34.90196078431372 percent,6388.0 second,18.431372549019606 percent
+2,Sun May 12 16:48:52 2024,90 degree_Celsius,42.0 kilometer_per_hour,28.235294117647058 percent,6402.0 second,23.92156862745098 percent
+3,Sun May 12 16:49:05 2024,90 degree_Celsius,56.0 kilometer_per_hour,41.568627450980394 percent,6415.0 second,17.647058823529413 percent
+4,Sun May 12 16:49:18 2024,90 degree_Celsius,44.0 kilometer_per_hour,22.352941176470587 percent,6428.0 second,18.431372549019606 percent
+5,Sun May 12 16:49:31 2024,89 degree_Celsius,51.0 kilometer_per_hour,16.07843137254902 percent,6441.0 second,18.823529411764707 percent
+6,Sun May 12 16:49:45 2024,87 degree_Celsius,48.0 kilometer_per_hour,18.431372549019606 percent,6454.0 second,16.862745098039216 percent
+7,Sun May 12 16:49:58 2024,87 degree_Celsius,38.0 kilometer_per_hour,29.80392156862745 percent,6468.0 second,25.49019607843137 percent
+8,Sun May 12 16:50:11 2024,87 degree_Celsius,43.0 kilometer_per_hour,52.15686274509804 percent,6481.0 second,18.823529411764707 percent
+9,Sun May 12 16:50:24 2024,88 degree_Celsius,49.0 kilometer_per_hour,16.862745098039216 percent,6494.0 second,17.254901960784313 percent
