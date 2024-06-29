@@ -1,0 +1,19 @@
+# Node.js
+backend/node_modules/
+backend/.env
+
+# Python
+device/__pycache__/
+device/*.pyc
+device/*.pyo
+device/*.pyd
+device/.Python
+device/env/
+device/venv/
+device/*.log
+
+# General
+.DS_Store
+.vscode/
+*.swp
+*.swo
