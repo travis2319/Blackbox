@@ -6,7 +6,7 @@ import time
 import datetime
 import requests
 import serial
-import pynmea2
+import pynmea2 # type: ignore
 
 obd_connector="/dev/ttyACM0"
 print(obd_connector)
