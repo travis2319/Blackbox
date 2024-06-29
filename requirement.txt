@@ -1,0 +1,7 @@
+pandas
+numpy
+matplotlib
+obd
+requests
+pyserial
+pynmea2
