@@ -17,3 +17,6 @@ device/*.log
 .vscode/
 *.swp
 *.swo
+
+# test/socket-connection
+tests/socket-connection/backend/node_modules/
