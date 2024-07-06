@@ -5,3 +5,4 @@ obd
 requests
 pyserial
 pynmea2
+serial
