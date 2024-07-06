@@ -79,6 +79,7 @@ import obd
 import time
 import requests
 from obd import OBDStatus
+import os
 
 # Initialize DataFrame
 def initialize_dataframe():
@@ -130,7 +131,9 @@ def run_obd_connection(connection):
 
 # Save data to CSV
 def save_to_csv(df):
-    df.to_csv('async_log.csv', mode='a')
+    # df.to_csv('async_log.csv', mode='a')
+    file_exists = os.path.isfile('async_log.csv')
+    df.to_csv('async_log.csv', mode='a', header=not file_exists, index=False)
 
 # Send data to Google Sheets
 def send_to_google_sheets(df):
