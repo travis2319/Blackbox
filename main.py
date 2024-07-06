@@ -1,3 +1,62 @@
+import threading
+import time
+import serial
+import signal
+from blackbox import run_obd, run_gps
+
+# Global flag to indicate if the script should continue running
+running = True
+
+def signal_handler(sig, frame):
+    global running
+    print("Shutdown signal received. \nClosing script...")
+    running = False
+
+# Register the signal handler
+signal.signal(signal.SIGINT, signal_handler)
+signal.signal(signal.SIGTERM, signal_handler)
+
+def is_obd_connected():
+    try:
+        ser = serial.Serial('/dev/ttyACM0')
+        ser.close()
+        return True
+    except serial.SerialException:
+        return False
+
+def main():
+    global running
+    while running:
+        if is_obd_connected():
+            print("OBD device connected. Running main logic...\n")
+            # Your main logic here
+            # Create threads for OBD and GPS handlers
+            obd_thread = threading.Thread(target=run_obd)
+            # gps_thread = threading.Thread(target=run_gps)
+            
+            # # Start both threads
+            obd_thread.start()
+            # gps_thread.start()
+            
+            # # Wait for both threads to complete
+            obd_thread.join()
+            # gps_thread.join()
+            
+            # print("OBD and GPS handlers have finished execution.")
+        else:
+            print("OBD device not connected. Waiting...")
+        
+        # Check for shutdown every second
+        for _ in range(5):  # 5 second total wait, checking each second
+            if not running:
+                break
+            time.sleep(1)
+
+    print("Script shutting down.")
+
+if __name__ == "__main__":
+    main()
+
 # # import threading
 # import time
 # from blackbox import run_obd, run_gps
@@ -29,28 +88,32 @@
 
 #     print("OBD and GPS handlers have finished execution.")
 
-import pandas as pd
-import numpy as np
-import obd
-import time
+# import pandas as pd
+# import numpy as np
+# import obd
+# import time
 # import requests
 # import serial
-# # import pynmea2 # type: ignore
+# import pynmea2
 # import signal
 # import sys
-import matplotlib
-import datetime
+# import matplotlib
+# import datetime
+# import string
+# import pynmea2
 
+# print(f"serial version: {serial.__version__}")
+# print(f"pynmea2 version: {pynmea2.__version__}")
 
-# Print library versions
-print(f"pandas version: {pd.__version__}")
-print(f"numpy version: {np.__version__}")
-print(f"obd version: {obd.__version__}")
-print(f"matplotlib version: {matplotlib.__version__}")
+# # Print library versions
+# print(f"pandas version: {pd.__version__}")
+# print(f"numpy version: {np.__version__}")
+# print(f"obd version: {obd.__version__}")
+# print(f"matplotlib version: {matplotlib.__version__}")
 
-# Print current time
-print(time.time())
-print(f"Time: {datetime.datetime.now().ctime()}")
+# # Print current time
+# print(time.time())
+# print(f"Time: {datetime.datetime.now().ctime()}")
 
 # # Setup OBD connection
 # obd_connector = "/dev/ttyACM0"
@@ -144,3 +207,4 @@ print(f"Time: {datetime.datetime.now().ctime()}")
 #     print("Saving data...")
 #     df.to_csv('async_log.csv', mode='a')
 #     print("All data saved.")
+
