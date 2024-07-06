@@ -3,13 +3,30 @@ import time
 import serial
 import signal
 from blackbox import run_obd, run_gps
+import logging
+import os
+import sys
+
+# Set up logging
+log_dir = os.path.join(os.path.dirname(__file__), 'logs')
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
+log_file = os.path.join(log_dir, 'app.log')
+
+# Configure logging to output to both file and console
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s',
+                    handlers=[
+                        logging.FileHandler(log_file),
+                        logging.StreamHandler(sys.stdout)
+                    ])
 
 # Global flag to indicate if the script should continue running
 running = True
 
 def signal_handler(sig, frame):
     global running
-    print("Shutdown signal received. \nClosing script...")
+    logging.info("Shutdown signal received. \nClosing script...")
     running = False
 
 # Register the signal handler
@@ -28,23 +45,23 @@ def main():
     global running
     while running:
         if is_obd_connected():
-            print("OBD device connected. Running main logic...\n")
+            logging.info("OBD device connected. Running main logic...")
             # Your main logic here
             # Create threads for OBD and GPS handlers
             obd_thread = threading.Thread(target=run_obd)
             # gps_thread = threading.Thread(target=run_gps)
             
-            # # Start both threads
+            # Start both threads
             obd_thread.start()
             # gps_thread.start()
             
-            # # Wait for both threads to complete
+            # Wait for both threads to complete
             obd_thread.join()
             # gps_thread.join()
             
-            # print("OBD and GPS handlers have finished execution.")
+            logging.info("OBD and GPS handlers have finished execution.")
         else:
-            print("OBD device not connected. Waiting...")
+            logging.info("OBD device not connected. Waiting...")
         
         # Check for shutdown every second
         for _ in range(5):  # 5 second total wait, checking each second
@@ -52,10 +69,69 @@ def main():
                 break
             time.sleep(1)
 
-    print("Script shutting down.")
+    logging.info("Script shutting down.")
 
 if __name__ == "__main__":
     main()
+
+# import threading
+# import time
+# import serial
+# import signal
+# from blackbox import run_obd, run_gps
+
+# # Global flag to indicate if the script should continue running
+# running = True
+
+# def signal_handler(sig, frame):
+#     global running
+#     print("Shutdown signal received. \nClosing script...")
+#     running = False
+
+# # Register the signal handler
+# signal.signal(signal.SIGINT, signal_handler)
+# signal.signal(signal.SIGTERM, signal_handler)
+
+# def is_obd_connected():
+#     try:
+#         ser = serial.Serial('/dev/ttyACM0')
+#         ser.close()
+#         return True
+#     except serial.SerialException:
+#         return False
+
+# def main():
+#     global running
+#     while running:
+#         if is_obd_connected():
+#             print("OBD device connected. Running main logic...\n")
+#             # Your main logic here
+#             # Create threads for OBD and GPS handlers
+#             obd_thread = threading.Thread(target=run_obd)
+#             # gps_thread = threading.Thread(target=run_gps)
+            
+#             # # Start both threads
+#             obd_thread.start()
+#             # gps_thread.start()
+            
+#             # # Wait for both threads to complete
+#             obd_thread.join()
+#             # gps_thread.join()
+            
+#             # print("OBD and GPS handlers have finished execution.")
+#         else:
+#             print("OBD device not connected. Waiting...")
+        
+#         # Check for shutdown every second
+#         for _ in range(5):  # 5 second total wait, checking each second
+#             if not running:
+#                 break
+#             time.sleep(1)
+
+#     print("Script shutting down.")
+
+# if __name__ == "__main__":
+#     main()
 
 # # import threading
 # import time

@@ -1,19 +1,113 @@
-import logging
-
-# Set up logging
-logging.basicConfig(
-    filename='logs/app.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-
-# Example usage
-logging.info("Application started")
-try:
-    # Your code here
-    logging.info("Data collection started")
-    # More code...
-except Exception as e:
-    logging.error(f"An error occurred: {str(e)}")
-
-logging.info("Application ended")
+2024-07-06 16:23:51,749 - INFO - OBD device connected. Running main logic...
+2024-07-06 16:23:51,751 - INFO - OBD Connector: /dev/ttyACM0
+2024-07-06 16:23:52,879 - ERROR - OBD2 socket disconnected
+2024-07-06 16:23:52,879 - WARNING - Cannot load commands: No connection to car
+2024-07-06 16:23:52,879 - INFO - OBD connector working in setup_obd_connection function
+2024-07-06 16:23:52,879 - INFO - NOT_CONNECTED: False
+2024-07-06 16:23:52,879 - INFO - OBD_CONNECTED: False
+2024-07-06 16:23:52,879 - INFO - CAR_CONNECTED: False
+2024-07-06 16:23:52,879 - WARNING - Not connected!!
+2024-07-06 16:23:52,882 - INFO - OBD and GPS handlers have finished execution.
+2024-07-06 16:23:57,889 - INFO - OBD device connected. Running main logic...
+2024-07-06 16:23:57,891 - INFO - OBD Connector: /dev/ttyACM0
+2024-07-06 16:23:59,017 - ERROR - OBD2 socket disconnected
+2024-07-06 16:23:59,017 - WARNING - Cannot load commands: No connection to car
+2024-07-06 16:23:59,017 - INFO - OBD connector working in setup_obd_connection function
+2024-07-06 16:23:59,017 - INFO - NOT_CONNECTED: False
+2024-07-06 16:23:59,017 - INFO - OBD_CONNECTED: False
+2024-07-06 16:23:59,017 - INFO - CAR_CONNECTED: False
+2024-07-06 16:23:59,017 - WARNING - Not connected!!
+2024-07-06 16:23:59,020 - INFO - OBD and GPS handlers have finished execution.
+2024-07-06 16:24:04,028 - INFO - OBD device connected. Running main logic...
+2024-07-06 16:24:04,029 - INFO - OBD Connector: /dev/ttyACM0
+2024-07-06 16:24:05,155 - ERROR - OBD2 socket disconnected
+2024-07-06 16:24:05,156 - WARNING - Cannot load commands: No connection to car
+2024-07-06 16:24:05,156 - INFO - OBD connector working in setup_obd_connection function
+2024-07-06 16:24:05,156 - INFO - NOT_CONNECTED: False
+2024-07-06 16:24:05,156 - INFO - OBD_CONNECTED: False
+2024-07-06 16:24:05,156 - INFO - CAR_CONNECTED: False
+2024-07-06 16:24:05,156 - WARNING - Not connected!!
+2024-07-06 16:24:05,159 - INFO - OBD and GPS handlers have finished execution.
+2024-07-06 16:24:10,166 - INFO - OBD device connected. Running main logic...
+2024-07-06 16:24:10,168 - INFO - OBD Connector: /dev/ttyACM0
+2024-07-06 16:24:11,294 - ERROR - OBD2 socket disconnected
+2024-07-06 16:24:11,294 - WARNING - Cannot load commands: No connection to car
+2024-07-06 16:24:11,294 - INFO - OBD connector working in setup_obd_connection function
+2024-07-06 16:24:11,294 - INFO - NOT_CONNECTED: False
+2024-07-06 16:24:11,294 - INFO - OBD_CONNECTED: False
+2024-07-06 16:24:11,294 - INFO - CAR_CONNECTED: False
+2024-07-06 16:24:11,294 - WARNING - Not connected!!
+2024-07-06 16:24:11,297 - INFO - OBD and GPS handlers have finished execution.
+2024-07-06 16:24:16,304 - INFO - OBD device connected. Running main logic...
+2024-07-06 16:24:16,306 - INFO - OBD Connector: /dev/ttyACM0
+2024-07-06 16:24:17,432 - ERROR - OBD2 socket disconnected
+2024-07-06 16:24:17,432 - WARNING - Cannot load commands: No connection to car
+2024-07-06 16:24:17,432 - INFO - OBD connector working in setup_obd_connection function
+2024-07-06 16:24:17,432 - INFO - NOT_CONNECTED: False
+2024-07-06 16:24:17,432 - INFO - OBD_CONNECTED: False
+2024-07-06 16:24:17,432 - INFO - CAR_CONNECTED: False
+2024-07-06 16:24:17,433 - WARNING - Not connected!!
+2024-07-06 16:24:17,435 - INFO - OBD and GPS handlers have finished execution.
+2024-07-06 16:24:22,443 - INFO - OBD device connected. Running main logic...
+2024-07-06 16:24:22,444 - INFO - OBD Connector: /dev/ttyACM0
+2024-07-06 16:24:23,577 - ERROR - OBD2 socket disconnected
+2024-07-06 16:24:23,577 - WARNING - Cannot load commands: No connection to car
+2024-07-06 16:24:23,577 - INFO - OBD connector working in setup_obd_connection function
+2024-07-06 16:24:23,577 - INFO - NOT_CONNECTED: False
+2024-07-06 16:24:23,577 - INFO - OBD_CONNECTED: False
+2024-07-06 16:24:23,577 - INFO - CAR_CONNECTED: False
+2024-07-06 16:24:23,577 - WARNING - Not connected!!
+2024-07-06 16:24:23,580 - INFO - OBD and GPS handlers have finished execution.
+2024-07-06 16:24:28,587 - INFO - OBD device connected. Running main logic...
+2024-07-06 16:24:28,589 - INFO - OBD Connector: /dev/ttyACM0
+2024-07-06 16:24:29,715 - ERROR - OBD2 socket disconnected
+2024-07-06 16:24:29,715 - WARNING - Cannot load commands: No connection to car
+2024-07-06 16:24:29,715 - INFO - OBD connector working in setup_obd_connection function
+2024-07-06 16:24:29,715 - INFO - NOT_CONNECTED: False
+2024-07-06 16:24:29,715 - INFO - OBD_CONNECTED: False
+2024-07-06 16:24:29,715 - INFO - CAR_CONNECTED: False
+2024-07-06 16:24:29,715 - WARNING - Not connected!!
+2024-07-06 16:24:29,718 - INFO - OBD and GPS handlers have finished execution.
+2024-07-06 16:24:34,726 - INFO - OBD device connected. Running main logic...
+2024-07-06 16:24:34,727 - INFO - OBD Connector: /dev/ttyACM0
+2024-07-06 16:24:35,853 - ERROR - OBD2 socket disconnected
+2024-07-06 16:24:35,854 - WARNING - Cannot load commands: No connection to car
+2024-07-06 16:24:35,854 - INFO - OBD connector working in setup_obd_connection function
+2024-07-06 16:24:35,854 - INFO - NOT_CONNECTED: False
+2024-07-06 16:24:35,854 - INFO - OBD_CONNECTED: False
+2024-07-06 16:24:35,854 - INFO - CAR_CONNECTED: False
+2024-07-06 16:24:35,854 - WARNING - Not connected!!
+2024-07-06 16:24:35,856 - INFO - OBD and GPS handlers have finished execution.
+2024-07-06 16:24:40,864 - INFO - OBD device connected. Running main logic...
+2024-07-06 16:24:40,865 - INFO - OBD Connector: /dev/ttyACM0
+2024-07-06 16:24:41,998 - ERROR - OBD2 socket disconnected
+2024-07-06 16:24:41,998 - WARNING - Cannot load commands: No connection to car
+2024-07-06 16:24:41,998 - INFO - OBD connector working in setup_obd_connection function
+2024-07-06 16:24:41,998 - INFO - NOT_CONNECTED: False
+2024-07-06 16:24:41,998 - INFO - OBD_CONNECTED: False
+2024-07-06 16:24:41,998 - INFO - CAR_CONNECTED: False
+2024-07-06 16:24:41,998 - WARNING - Not connected!!
+2024-07-06 16:24:42,001 - INFO - OBD and GPS handlers have finished execution.
+2024-07-06 16:24:47,008 - INFO - OBD device connected. Running main logic...
+2024-07-06 16:24:47,010 - INFO - OBD Connector: /dev/ttyACM0
+2024-07-06 16:24:48,136 - ERROR - OBD2 socket disconnected
+2024-07-06 16:24:48,136 - WARNING - Cannot load commands: No connection to car
+2024-07-06 16:24:48,136 - INFO - OBD connector working in setup_obd_connection function
+2024-07-06 16:24:48,136 - INFO - NOT_CONNECTED: False
+2024-07-06 16:24:48,136 - INFO - OBD_CONNECTED: False
+2024-07-06 16:24:48,136 - INFO - CAR_CONNECTED: False
+2024-07-06 16:24:48,136 - WARNING - Not connected!!
+2024-07-06 16:24:48,139 - INFO - OBD and GPS handlers have finished execution.
+2024-07-06 16:24:53,147 - INFO - OBD device connected. Running main logic...
+2024-07-06 16:24:53,148 - INFO - OBD Connector: /dev/ttyACM0
+2024-07-06 16:24:54,275 - ERROR - OBD2 socket disconnected
+2024-07-06 16:24:54,275 - WARNING - Cannot load commands: No connection to car
+2024-07-06 16:24:54,275 - INFO - OBD connector working in setup_obd_connection function
+2024-07-06 16:24:54,275 - INFO - NOT_CONNECTED: False
+2024-07-06 16:24:54,275 - INFO - OBD_CONNECTED: False
+2024-07-06 16:24:54,275 - INFO - CAR_CONNECTED: False
+2024-07-06 16:24:54,275 - WARNING - Not connected!!
+2024-07-06 16:24:54,278 - INFO - OBD and GPS handlers have finished execution.
+2024-07-06 16:24:55,237 - INFO - Shutdown signal received. 
+Closing script...
+2024-07-06 16:24:55,278 - INFO - Script shutting down.
