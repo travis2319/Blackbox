@@ -1,37 +1,38 @@
-Title: Automotive Diagnostic and Activity Monitoring (ADAM) System
+# Automotive Diagnostic and Activity Monitoring (ADAM) System
 
-Motivation: 
- Our motivation behind choosing this project was to develop a sophisticated system for vehicle data analysis, enhancing both safety and user convenience while providing forensic advantages.
- 
-Objective Scope of the Project:
-Objective: This project aims to collect data from the vehicle before accidents and create a system for seamless vehicle monitoring to aid in forensic analysis and user convenience.
+## Overview
+The Automotive Diagnostic and Activity Monitoring (ADAM) System is an innovative project aimed at enhancing vehicle safety, user convenience, and forensic capabilities through the power of advanced technologies. By meticulously collecting and analyzing data from vehicles prior to accidents, ADAM seeks to identify and mitigate potential risks on the road, ultimately improving overall safety for all drivers and passengers.
 
-Scope:
- The application will gather data from the vehicle, preprocess it for analysis, and then conduct the analysis to provide useful insights and outputs.
- 
-Project Description:
-The project "Automotive Diagnostic and Activity Monitoring (ADAM) System" focuses on leveraging advanced technologies to enhance vehicle safety, user convenience, and forensic capabilities. By collecting data from vehicles prior to accidents, the system aims to proactively identify and mitigate potential risks, thereby improving overall safety on the road.
-Additionally, the project aims to facilitate forensic investigations by making it easier to monitor vehicle activities and help determine motives in case of incidents. This can significantly aid law enforcement and insurance companies in their investigations.
-The system also helps users diagnose problems in their vehicles, reducing the risk of being scammed by mechanics. By providing accurate diagnostic information, users can make informed decisions about necessary repairs and maintenance.
-Through a combination of data collection, analysis, and system integration, this project seeks to revolutionize the way vehicles operate and interact with their surroundings. By automating processes and enhancing security measures, the project aims to create a safer and more user-friendly experience for vehicle owners and passengers alike.
-This project aims to enhance vehicle safety and convenience by:
+Moreover, this project plays a pivotal role in forensic investigations by simplifying the monitoring of vehicle activities, which can aid law enforcement and insurance companies in determining the circumstances surrounding incidents. Additionally, the ADAM System provides users with the tools needed to accurately diagnose vehicle problems, ensuring they are equipped to make informed decisions and avoid potential scams by unscrupulous mechanics.
 
-●	Collecting and analysing vehicle data to identify potential accident risks.
+The ADAM System aims to revolutionize vehicle operation and interaction through a robust combination of data collection, analysis, and system integration. By automating key processes and enhancing security measures, we aspire to create a safer and more user-friendly experience for vehicle owners and their passengers.
 
-●	Implementing data mining and cryptography techniques to secure data and prevent unauthorized access.
+## Key Features
+- **Accident Risk Identification**: The system collects and analyzes vehicle data to proactively identify potential risks that may lead to accidents, ensuring drivers are informed and can take preventive measures.
+  
+- **Data Security**: Implementing advanced data mining and cryptography techniques to secure vehicle data and prevent unauthorized access, safeguarding user privacy and sensitive information.
 
-●	Facilitating forensic investigations by monitoring vehicle activities and helping determine motives in incidents.
+- **Forensic Investigation Support**: By monitoring vehicle activities, the ADAM System facilitates forensic investigations, helping to uncover key information that may assist law enforcement and insurance investigations, thereby establishing motives and circumstances related to incidents.
 
-●	Helping users diagnose vehicle problems accurately to avoid being scammed by mechanics.
-The project involves two phases:
-Data Storing, Tracking, & Black Box: Collects and stores vehicle data, creating a black box for accident analysis.
+- **Accurate Diagnostics**: The system allows users to diagnose vehicle problems accurately, providing transparency and empowering them to make informed decisions about necessary repairs and maintenance, thus reducing the risk of exploitation by mechanics.
 
-Diagnostics and Monitoring: Provides accurate diagnostics to users for identifying vehicle issues and monitoring activities.
-Hardware and Software Requirements:
+## Project Structure
+The ADAM System consists of two key phases:
 
-Hardware Requirements: OBD II, Raspberry Pi 3, USB cable, Neo 6M (GPS Module)
+### Phase 1: Data Storing, Tracking, & Black Box
+In this phase, the ADAM System focuses on the collection and storage of critical vehicle data, creating a "black box" that records essential parameters for analysis in the event of an accident. This data retention is crucial for subsequent investigations and understanding what transpired leading up to a collision.
 
-Software Requirements:
-   - Libraries and Frameworks: TensorFlow, scikit-learn, NLTK, Flask
-   - IDE:Jupyter Notebook
-   - Database: Local Storage
+### Phase 2: Diagnostics and Monitoring
+The second phase of the project is dedicated to providing users with accurate diagnostic information regarding their vehicles. This phase also includes the continuous monitoring of vehicle activities, thereby facilitating proactive maintenance and timely repairs based on real-time data.
+
+## Goals
+Through this project, we aim to achieve the following objectives:
+- **Enhance Vehicle Safety**: By identifying risks and preventing accidents through data analysis.
+- **Augment Forensic Capabilities**: Providing vital information that aids in investigations.
+- **Empower Vehicle Owners**: Giving users the tools to understand and diagnose vehicle issues.
+- **Promote Good Practices**: Encouraging transparency and fair practices within the automotive repair industry.
+
+## Conclusion
+The ADAM System aims to reshape the interaction between vehicles and their environments by leveraging cutting-edge technology. Through data-driven insights and enhanced security, we aspire to create a transformative experience for all vehicle stakeholders, making roads safer and empowering users with the knowledge they need to take control of their automotive experiences. 
+
+Join us on this journey towards revolutionizing automotive safety, convenience, and integrity! 
