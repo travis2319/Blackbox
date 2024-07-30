@@ -1,32 +1,37 @@
-In this study, we present two distinct models designed to enhance vehicle telemetry, thereby ensuring safety, compliance, and user accessibility. The first model prioritizes universal compatibility, while the second emphasizes user convenience and operational efficiency. Both models leverage advanced sensor technologies and data transmission protocols to collect and relay critical information to relevant authorities and users. The following journal entry provides a comprehensive overview of the working principles and functionalities of these two models.
+Title: Automotive Diagnostic and Activity Monitoring (ADAM) System
 
-Introduction: With the increasing emphasis on road safety and regulatory compliance, the integration of advanced telemetry systems in vehicles has become imperative. These systems not only facilitate real-time monitoring of vehicle performance and location but also enable seamless communication with regulatory bodies and users. In this context, we present two distinct telemetry models, each tailored to address specific operational requirements and user preferences.
+Motivation: 
+ Our motivation behind choosing this project was to develop a sophisticated system for vehicle data analysis, enhancing both safety and user convenience while providing forensic advantages.
+ 
+Objective Scope of the Project:
+Objective: This project aims to collect data from the vehicle before accidents and create a system for seamless vehicle monitoring to aid in forensic analysis and user convenience.
 
-Model 1: Universal Compatibility and Regulatory Compliance The first model is engineered to ensure universal compatibility with a wide range of vehicles, emphasizing seamless integration and regulatory compliance. Upon the initiation of the vehicle, the telemetry device, powered by an Arduino module, commences data collection from a suite of sensors, including piezoceramic (accelerometer), angular rate (gyro), Wi-Fi, GSM, NavIC GAGAN GPS receiver, RFID, and IR modules. Subsequently, the collected data is transmitted at regular intervals via the GSM module to the Regional Transport Office (RTO) services. Upon the cessation of vehicle operation, the system enters a dormant state, ensuring efficient power management.
+Scope:
+ The application will gather data from the vehicle, preprocess it for analysis, and then conduct the analysis to provide useful insights and outputs.
+ 
+Project Description:
+The project "Automotive Diagnostic and Activity Monitoring (ADAM) System" focuses on leveraging advanced technologies to enhance vehicle safety, user convenience, and forensic capabilities. By collecting data from vehicles prior to accidents, the system aims to proactively identify and mitigate potential risks, thereby improving overall safety on the road.
+Additionally, the project aims to facilitate forensic investigations by making it easier to monitor vehicle activities and help determine motives in case of incidents. This can significantly aid law enforcement and insurance companies in their investigations.
+The system also helps users diagnose problems in their vehicles, reducing the risk of being scammed by mechanics. By providing accurate diagnostic information, users can make informed decisions about necessary repairs and maintenance.
+Through a combination of data collection, analysis, and system integration, this project seeks to revolutionize the way vehicles operate and interact with their surroundings. By automating processes and enhancing security measures, the project aims to create a safer and more user-friendly experience for vehicle owners and passengers alike.
+This project aims to enhance vehicle safety and convenience by:
 
-![image](https://github.com/travis2319/Blackbox/assets/95576296/00ebaab0-bf58-469b-a253-426313ee7f55)
+●	Collecting and analysing vehicle data to identify potential accident risks.
 
+●	Implementing data mining and cryptography techniques to secure data and prevent unauthorized access.
 
-Model 2: User-Centric Accessibility and Operational Efficiency In contrast, the second model prioritizes user accessibility, operational efficiency, and cost-effectiveness. Upon vehicle activation, the telemetry module synchronizes with the vehicle's systems and prompts the user to engage with a dedicated mobile application. The user is required to authenticate using biometric credentials and grant necessary permissions for location tracking, hotspot activation, and nearby device sharing. As the vehicle operates, the Arduino module interfaces with the vehicle's ECU sensors via the OBDII port, collecting real-time data and location information through the Wi-Fi module. Subsequently, the collected data is transmitted directly to the user's mobile application, with automatic backup and encryption for secure transmission to the RTO office and company servers at predefined intervals.
+●	Facilitating forensic investigations by monitoring vehicle activities and helping determine motives in incidents.
 
+●	Helping users diagnose vehicle problems accurately to avoid being scammed by mechanics.
+The project involves two phases:
+Data Storing, Tracking, & Black Box: Collects and stores vehicle data, creating a black box for accident analysis.
 
-Conclusion: In conclusion, the comparative analysis of the two telemetry models underscores their distinct operational paradigms, catering to diverse stakeholder requirements. While the first model prioritizes universal compatibility and regulatory compliance, the second model emphasizes user-centric accessibility and operational efficiency. Both models represent significant advancements in vehicle telemetry, offering enhanced safety, regulatory compliance, and user convenience. Future research endeavors will focus on integrating the strengths of these models to develop a comprehensive telemetry solution that addresses the multifaceted needs of modern vehicular operations.
+Diagnostics and Monitoring: Provides accurate diagnostics to users for identifying vehicle issues and monitoring activities.
+Hardware and Software Requirements:
 
+Hardware Requirements: OBD II, Raspberry Pi 3, USB cable, Neo 6M (GPS Module)
 
-Verification and Testing of NEO 6m (GPS)
-Over the past few months, our team has been focused on verifying and testing the functionality of the NEO 6m (GPS). We have successfully obtained output data, which we have integrated with a Google AppScript server (Web app). This data is now being stored and accessed using Google Excel sheets.
-
-![image](https://github.com/travis2319/Blackbox/assets/95576296/9d7d6117-91ef-4c2a-a43a-2fe55233a4e6)
-
-
-
-Step 1: Development of Transaction Process (MODEL 3)
-Currently, our primary focus is on developing the transaction process. In this stage, we are implementing a stationary camera system (referred to as MODEL 3) to capture images of car number plates. These images will undergo an image recognition operation to decipher the numbers on the number plates.
-
-Step 2: Cross-Checking with RTO Database and Contact Details Retrieval
-Once the numbers on the number plates are deciphered, we will cross-check this information with the Regional Transport Office (RTO) database, which is freely available on the internet. This will allow us to retrieve the contact details of the vehicle owner.
-
-Step 3: Bank Database Cross-Checking and Fund Deduction
-Using the owner's contact details, we will then cross-check with the bank database to identify the account holder. Upon confirmation, we will deduct the specified amount from the owner's account and transfer it to a private business account. This process will be carried out separately from the deduction of funds from the owner's account via the bank.
-
-These steps represent our current progress and focus in our ongoing project.
+Software Requirements:
+   - Libraries and Frameworks: TensorFlow, scikit-learn, NLTK, Flask
+   - IDE:Jupyter Notebook
+   - Database: Local Storage
