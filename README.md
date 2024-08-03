@@ -1,32 +1,38 @@
-In this study, we present two distinct models designed to enhance vehicle telemetry, thereby ensuring safety, compliance, and user accessibility. The first model prioritizes universal compatibility, while the second emphasizes user convenience and operational efficiency. Both models leverage advanced sensor technologies and data transmission protocols to collect and relay critical information to relevant authorities and users. The following journal entry provides a comprehensive overview of the working principles and functionalities of these two models.
+# Automotive Diagnostic and Activity Monitoring (ADAM) System
 
-Introduction: With the increasing emphasis on road safety and regulatory compliance, the integration of advanced telemetry systems in vehicles has become imperative. These systems not only facilitate real-time monitoring of vehicle performance and location but also enable seamless communication with regulatory bodies and users. In this context, we present two distinct telemetry models, each tailored to address specific operational requirements and user preferences.
+## Overview
+The Automotive Diagnostic and Activity Monitoring (ADAM) System is an innovative project aimed at enhancing vehicle safety, user convenience, and forensic capabilities through the power of advanced technologies. By meticulously collecting and analyzing data from vehicles prior to accidents, ADAM seeks to identify and mitigate potential risks on the road, ultimately improving overall safety for all drivers and passengers.
 
-Model 1: Universal Compatibility and Regulatory Compliance The first model is engineered to ensure universal compatibility with a wide range of vehicles, emphasizing seamless integration and regulatory compliance. Upon the initiation of the vehicle, the telemetry device, powered by an Arduino module, commences data collection from a suite of sensors, including piezoceramic (accelerometer), angular rate (gyro), Wi-Fi, GSM, NavIC GAGAN GPS receiver, RFID, and IR modules. Subsequently, the collected data is transmitted at regular intervals via the GSM module to the Regional Transport Office (RTO) services. Upon the cessation of vehicle operation, the system enters a dormant state, ensuring efficient power management.
+Moreover, this project plays a pivotal role in forensic investigations by simplifying the monitoring of vehicle activities, which can aid law enforcement and insurance companies in determining the circumstances surrounding incidents. Additionally, the ADAM System provides users with the tools needed to accurately diagnose vehicle problems, ensuring they are equipped to make informed decisions and avoid potential scams by unscrupulous mechanics.
 
-![image](https://github.com/travis2319/Blackbox/assets/95576296/00ebaab0-bf58-469b-a253-426313ee7f55)
+The ADAM System aims to revolutionize vehicle operation and interaction through a robust combination of data collection, analysis, and system integration. By automating key processes and enhancing security measures, we aspire to create a safer and more user-friendly experience for vehicle owners and their passengers.
 
+## Key Features
+- **Accident Risk Identification**: The system collects and analyzes vehicle data to proactively identify potential risks that may lead to accidents, ensuring drivers are informed and can take preventive measures.
+  
+- **Data Security**: Implementing advanced data mining and cryptography techniques to secure vehicle data and prevent unauthorized access, safeguarding user privacy and sensitive information.
 
-Model 2: User-Centric Accessibility and Operational Efficiency In contrast, the second model prioritizes user accessibility, operational efficiency, and cost-effectiveness. Upon vehicle activation, the telemetry module synchronizes with the vehicle's systems and prompts the user to engage with a dedicated mobile application. The user is required to authenticate using biometric credentials and grant necessary permissions for location tracking, hotspot activation, and nearby device sharing. As the vehicle operates, the Arduino module interfaces with the vehicle's ECU sensors via the OBDII port, collecting real-time data and location information through the Wi-Fi module. Subsequently, the collected data is transmitted directly to the user's mobile application, with automatic backup and encryption for secure transmission to the RTO office and company servers at predefined intervals.
+- **Forensic Investigation Support**: By monitoring vehicle activities, the ADAM System facilitates forensic investigations, helping to uncover key information that may assist law enforcement and insurance investigations, thereby establishing motives and circumstances related to incidents.
 
+- **Accurate Diagnostics**: The system allows users to diagnose vehicle problems accurately, providing transparency and empowering them to make informed decisions about necessary repairs and maintenance, thus reducing the risk of exploitation by mechanics.
 
-Conclusion: In conclusion, the comparative analysis of the two telemetry models underscores their distinct operational paradigms, catering to diverse stakeholder requirements. While the first model prioritizes universal compatibility and regulatory compliance, the second model emphasizes user-centric accessibility and operational efficiency. Both models represent significant advancements in vehicle telemetry, offering enhanced safety, regulatory compliance, and user convenience. Future research endeavors will focus on integrating the strengths of these models to develop a comprehensive telemetry solution that addresses the multifaceted needs of modern vehicular operations.
+## Project Structure
+The ADAM System consists of two key phases:
 
+### Phase 1: Data Storing, Tracking, & Black Box
+In this phase, the ADAM System focuses on the collection and storage of critical vehicle data, creating a "black box" that records essential parameters for analysis in the event of an accident. This data retention is crucial for subsequent investigations and understanding what transpired leading up to a collision.
 
-Verification and Testing of NEO 6m (GPS)
-Over the past few months, our team has been focused on verifying and testing the functionality of the NEO 6m (GPS). We have successfully obtained output data, which we have integrated with a Google AppScript server (Web app). This data is now being stored and accessed using Google Excel sheets.
+### Phase 2: Diagnostics and Monitoring
+The second phase of the project is dedicated to providing users with accurate diagnostic information regarding their vehicles. This phase also includes the continuous monitoring of vehicle activities, thereby facilitating proactive maintenance and timely repairs based on real-time data.
 
-![image](https://github.com/travis2319/Blackbox/assets/95576296/9d7d6117-91ef-4c2a-a43a-2fe55233a4e6)
+## Goals
+Through this project, we aim to achieve the following objectives:
+- **Enhance Vehicle Safety**: By identifying risks and preventing accidents through data analysis.
+- **Augment Forensic Capabilities**: Providing vital information that aids in investigations.
+- **Empower Vehicle Owners**: Giving users the tools to understand and diagnose vehicle issues.
+- **Promote Good Practices**: Encouraging transparency and fair practices within the automotive repair industry.
 
+## Conclusion
+The ADAM System aims to reshape the interaction between vehicles and their environments by leveraging cutting-edge technology. Through data-driven insights and enhanced security, we aspire to create a transformative experience for all vehicle stakeholders, making roads safer and empowering users with the knowledge they need to take control of their automotive experiences. 
 
-
-Step 1: Development of Transaction Process (MODEL 3)
-Currently, our primary focus is on developing the transaction process. In this stage, we are implementing a stationary camera system (referred to as MODEL 3) to capture images of car number plates. These images will undergo an image recognition operation to decipher the numbers on the number plates.
-
-Step 2: Cross-Checking with RTO Database and Contact Details Retrieval
-Once the numbers on the number plates are deciphered, we will cross-check this information with the Regional Transport Office (RTO) database, which is freely available on the internet. This will allow us to retrieve the contact details of the vehicle owner.
-
-Step 3: Bank Database Cross-Checking and Fund Deduction
-Using the owner's contact details, we will then cross-check with the bank database to identify the account holder. Upon confirmation, we will deduct the specified amount from the owner's account and transfer it to a private business account. This process will be carried out separately from the deduction of funds from the owner's account via the bank.
-
-These steps represent our current progress and focus in our ongoing project.
+Join us on this journey towards revolutionizing automotive safety, convenience, and integrity! 
