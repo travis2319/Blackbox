@@ -2,7 +2,7 @@ import threading
 import time
 import serial
 import signal
-from blackbox import run_obd, run_gps
+from blackbox import run_obd
 import logging
 import os
 import sys
@@ -26,7 +26,7 @@ running = True
 
 def signal_handler(sig, frame):
     global running
-    logging.info("Shutdown signal received. \nClosing script...")
+    logging.info("Shutdown signal received. Closing script...")
     running = False
 
 # Register the signal handler
@@ -34,45 +34,133 @@ signal.signal(signal.SIGINT, signal_handler)
 signal.signal(signal.SIGTERM, signal_handler)
 
 def is_obd_connected():
+    logging.info("Checking OBD device connection...")
     try:
-        ser = serial.Serial('/dev/ttyACM0')
-        ser.close()
-        return True
-    except serial.SerialException:
+        with serial.Serial('/dev/ttyACM0') as ser:
+            ser.close()
+            logging.info("OBD device connected successfully.")
+            return True
+    except Exception as e:
+        logging.error(f"Error connecting to OBD device: {e}")
         return False
 
 def main():
     global running
+    logging.info("Main function started.")
     while running:
         if is_obd_connected():
-            logging.info("OBD device connected. Running main logic...")
-            # Your main logic here
-            # Create threads for OBD and GPS handlers
+            logging.info("OBD device detected. Proceeding with main logic...")
+            
+            logging.info("Starting OBD thread.")
             obd_thread = threading.Thread(target=run_obd)
-            # gps_thread = threading.Thread(target=run_gps)
-            
-            # Start both threads
             obd_thread.start()
+
+            # Uncomment and implement GPS logic if needed
+            # logging.info("Starting GPS thread.")
+            # gps_thread = threading.Thread(target=run_gps)
             # gps_thread.start()
-            
-            # Wait for both threads to complete
+
+            logging.info("Waiting for OBD thread to finish.")
             obd_thread.join()
+
+            # Uncomment if GPS logic is implemented
+            # logging.info("Waiting for GPS thread to finish.")
             # gps_thread.join()
-            
+
             logging.info("OBD and GPS handlers have finished execution.")
         else:
-            logging.info("OBD device not connected. Waiting...")
-        
+            logging.info("OBD device not connected. Retrying in 5 seconds.")
+
         # Check for shutdown every second
-        for _ in range(5):  # 5 second total wait, checking each second
+        for i in range(5):  # 5 second total wait, checking each second
             if not running:
+                logging.info("Shutdown detected during wait period.")
                 break
+            logging.debug(f"Waiting... {i+1}/5 seconds")
             time.sleep(1)
 
-    logging.info("Script shutting down.")
+    logging.info("Main loop exited. Script shutting down.")
 
 if __name__ == "__main__":
+    logging.info("Starting script...")
     main()
+    logging.info("Script execution completed.")
+
+# import threading
+# import time
+# import serial
+# import signal
+# from blackbox import run_obd
+# import logging
+# import os
+# import sys
+
+# # Set up logging
+# log_dir = os.path.join(os.path.dirname(__file__), 'logs')
+# if not os.path.exists(log_dir):
+#     os.makedirs(log_dir)
+# log_file = os.path.join(log_dir, 'app.log')
+
+# # Configure logging to output to both file and console
+# logging.basicConfig(level=logging.INFO,
+#                     format='%(asctime)s - %(levelname)s - %(message)s',
+#                     handlers=[
+#                         logging.FileHandler(log_file),
+#                         logging.StreamHandler(sys.stdout)
+#                     ])
+
+# # Global flag to indicate if the script should continue running
+# running = True
+
+# def signal_handler(sig, frame):
+#     global running
+#     logging.info("Shutdown signal received. \nClosing script...")
+#     running = False
+
+# # Register the signal handler
+# signal.signal(signal.SIGINT, signal_handler)
+# signal.signal(signal.SIGTERM, signal_handler)
+
+# def is_obd_connected():
+#     try:
+#         ser = serial.Serial('/dev/ttyACM0')
+#         ser.close()
+#         return True
+#     except serial.SerialException:
+#         return False
+
+# def main():
+#     global running
+#     while running:
+#         if is_obd_connected():
+#             logging.info("OBD device connected. Running main logic...")
+#             # Your main logic here
+#             # Create threads for OBD and GPS handlers
+#             obd_thread = threading.Thread(target=run_obd)
+#             # gps_thread = threading.Thread(target=run_gps)
+            
+#             # Start both threads
+#             obd_thread.start()
+#             # gps_thread.start()
+            
+#             # Wait for both threads to complete
+#             obd_thread.join()
+#             # gps_thread.join()
+            
+#             logging.info("OBD and GPS handlers have finished execution.")
+#         else:
+#             logging.info("OBD device not connected. Waiting...")
+        
+#         # Check for shutdown every second
+#         for _ in range(5):  # 5 second total wait, checking each second
+#             if not running:
+#                 break
+#             time.sleep(1)
+
+#     logging.info("Script shutting down.")
+
+# if __name__ == "__main__":
+#     main()
 
 # import threading
 # import time
